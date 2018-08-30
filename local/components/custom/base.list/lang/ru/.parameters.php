@@ -1,0 +1,19 @@
+<?
+$MESS["BASE_INCLUDE_SUBSECTIONS"] = "Показывать элементы подразделов раздела";
+$MESS["BASE_INCLUDE_SUBSECTIONS_ALL"] = "всех подразделов";
+$MESS["BASE_INCLUDE_SUBSECTIONS_ACTIVE"] = "активных подразделов";
+$MESS["BASE_INCLUDE_SUBSECTIONS_NO"] = "не показывать";
+$MESS["BASE_SHOW_ALL_WO_SECTION"] = "Показывать все элементы, если не указан раздел";
+$MESS["BASE_CHECK_DATES"] = "Показывать только активные на данный момент";
+$MESS["BASE_IBLOCK_PAGE_ELEMENT_COUNT"] = "Количество на странице";
+$MESS["BASE_ADD_SECTIONS_CHAIN"] = "Включать раздел в цепочку навигации";
+$MESS["BASE_ACTIVE_DATE_FORMAT"] = "Формат показа даты";
+$MESS["BASE_IBLOCK_SORT_ASC"] = "по возрастанию";
+$MESS["BASE_IBLOCK_SORT_DESC"] = "по убыванию";
+$MESS["BASE_IBLOCK_SORT_FIELD"] = "По какому полю сортируем";
+$MESS["BASE_IBLOCK_SORT_ORDER"] = "Порядок сортировки";
+$MESS["BASE_IBLOCK_SORT_FIELD2"] = "Поле для второй сортировки";
+$MESS["BASE_IBLOCK_SORT_ORDER2"] = "Порядок второй сортировки";
+$MESS["BASE_IBLOCK_FIELD"] = "Поля";
+$MESS["BASE_IBLOCK_SECTION_ID"] = "ID раздела";
+$MESS["BASE_IBLOCK_SECTION_CODE"] = "Символьный код раздела";
