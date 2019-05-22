@@ -2,7 +2,7 @@
 
 /**
  * Class Files
- * @package Mega\Main\Helpers
+ * @package Custom\Main\Helpers
  */
 class Files
 {

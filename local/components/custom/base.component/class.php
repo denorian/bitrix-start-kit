@@ -604,7 +604,7 @@ class BaseComponent extends CBitrixComponent
     private function setLastModified()
     {
         if (array_key_exists(self::RESULT_LAST_MODIFIED, $this->arResult)) {
-            \Mega\Main\Helper\Page::setLastModified($this->arResult[self::RESULT_LAST_MODIFIED]);
+            \Custom\Main\Helper\Page::setLastModified($this->arResult[self::RESULT_LAST_MODIFIED]);
         }
     }
 
