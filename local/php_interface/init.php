@@ -6,4 +6,3 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/include/constant.
 
 // События
 require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/include/handlers/disableLoginByHttpAuth.php';
-
