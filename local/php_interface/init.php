@@ -5,5 +5,5 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/include/agents/Ca
 require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/include/constant.php';
 
 // События
-require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/include/event_handlers/disableLoginByHttpAuth.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/local/php_interface/include/handlers/disableLoginByHttpAuth.php';
 
