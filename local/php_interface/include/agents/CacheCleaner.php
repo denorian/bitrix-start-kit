@@ -16,13 +16,14 @@ class CacheCleaner
             if (!class_exists("CFileCacheCleaner")) {
                 require_once($_SERVER["DOCUMENT_ROOT"] . "/bitrix/modules/main/classes/general/cache_files_cleaner.php");
             }
+            set_time_limit(0);
 
             $curentTime = mktime();
 
             if (defined("BX_CRONTAB") && BX_CRONTAB === true)
-                $endTime = time() + 15; //Если на кроне, то работаем 15 секунд
+                $endTime = time() + 60; //Если на кроне, то работаем 60 секунд
             else
-                $endTime = time() + 1; //Если на хитах, то не более секунды
+                $endTime = time() + 60;
             $obCacheCleaner = new CFileCacheCleaner("all");
 
             if (!$obCacheCleaner->InitPath($path)) {
@@ -33,20 +34,24 @@ class CacheCleaner
             $obCacheCleaner->Start();
 
             while ($file = $obCacheCleaner->GetNextFile()) {
+                if($file == 1)
+                    continue;
+
                 if (is_string($file)) {
+                    if (time() >= $endTime)
+                        break;
+                    $lastFile = $file;
                     $date_expire = $obCacheCleaner->GetFileExpiration($file);
                     if ($date_expire) {
                         if ($date_expire < $curentTime) {
                             unlink($file);
                         }
                     }
-                    if (time() >= $endTime)
-                        break;
                 }
             }
 
-            if (is_string($file)) {
-                return "CacheCleaner::cleanExpireCache(\"" . $file . "\");";
+            if (is_string($lastFile)) {
+                return "CacheCleaner::cleanExpireCache(\"" . substr($lastFile, strpos($lastFile, "/bitrix/cache")) . "\");";
             } else {
                 return "CacheCleaner::cleanExpireCache();";
             }
