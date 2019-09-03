@@ -31,7 +31,7 @@ class RestRouterComponent extends CBitrixComponent
             );
 
             $explodedMethod = explode('::', $requestedMethod);
-            $class = "\Mega\Rest\\" . $explodedMethod[0];
+            $class = "\Custom\Rest\\" . $explodedMethod[0];
             $method = str_replace('()', '', $explodedMethod[1]);
 
             if (method_exists($class, $method)) {
